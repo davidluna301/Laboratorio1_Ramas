@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slake </title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+        <!-- Script principal (defer para que cargue después del HTML) -->
+    <script src="css/js/script.js" defer></script>
+</head>
+
+<!-- 'darkmode'  -->
+<body class="darkmode">
+    <!-- Nav -->
+    <nav id="navbar">
+        <div class="nav-inner container">
+            <!-- Logo -->
+            <a href="#hero" class="nav-logo" aria-label="Slake inicio">
+                <span class="logo-icon" aria-hidden="true">◈</span> Slake
+            </a>
+            <!-- Links escritorio -->
+            <ul class="nav-links" id="nav-links" role="list">
+                <li><a href="#beneficios">Funciones</a></li>
+                <li><a href="#caracteristicas">Soluciones</a></li>
+                <li><a href="#testimonios">Clientes</a></li>
+                <li><a href="#contacto">Precios</a></li>
+            </ul>
+            <div class="nav-actions">
+                <!--darkmoon / lightmode-->
+                <button id="theme-switch" aria-label="Cambiar modo claro u oscuro">
+                    <!-- Ícono luna -->
+                    <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg"
+                         width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <!-- Ícono sol (oculto al inicio porque body empieza en darkmode) -->
+                    <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg"
+                         width="22" height="22" viewBox="0 0 24 24"
+                         fill="none" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1"  x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22"  y1="4.22"  x2="5.64"  y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1"  y1="12" x2="3"  y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22"  y1="19.78" x2="5.64"  y2="18.36"/>
+                        <line x1="18.36" y1="5.64"  x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+
+                <a href="#" class="btn btn-ghost">Iniciar sesión</a>
+                <a href="#contacto" class="btn btn-primary">Comenzar gratis</a>
+            </div>
+            <button id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Menú desplegable móvil -->
+        <div id="mobile-menu" aria-hidden="true">
+            <a href="#beneficios">Funciones</a>
+            <a href="#caracteristicas">Soluciones</a>
+            <a href="#testimonios">Clientes</a>
+            <a href="#contacto">Precios</a>
+            <div class="mobile-ctas">
+                <a href="#" class="btn btn-ghost">Iniciar sesión</a>
+                <a href="#contacto" class="btn btn-primary">Comenzar gratis</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <header id="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-dot" aria-hidden="true"></span>
+                    Nuevo: Agentes de IA disponibles en Slake
+                </div>
+
+                <h1>
+                    Hecho para la <br>
+                    <span class="gradient-text">era de la IA</span>
+                </h1>
+
+                <p class="hero-desc">
+                    Slake une mensajería, automatización e inteligencia artificial
+                    en una sola plataforma. Así trabajan los equipos que van más rápido.
+                </p>
+
+                <div class="hero-ctas">
+                    <button class="btn btn-primary btn-lg" id="cta-hero">
+                        Comenzar gratis →
+                    </button>
+                    <a href="#caracteristicas" class="btn btn-outline btn-lg">
+                        Ver demo ▶
+                    </a>
+                </div>
+
+                <p class="hero-note">Sin tarjeta de crédito · Gratis en el plan básico</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>50k+</strong>
+                        <span>Equipos activos</span>
+                    </div>
+                    <div class="stat-sep" aria-hidden="true"></div>
+                    <div class="stat">
+                        <strong>99.9%</strong>
+                        <span>Uptime SLA</span>
+                    </div>
+                    <div class="stat-sep" aria-hidden="true"></div>
+                    <div class="stat">
+                        <strong>4.9★</strong>
+                        <span>Satisfacción</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="app-mockup">
+                    <div class="mockup-sidebar">
+                        <div class="sidebar-brand">◈ Slake</div>
+                        <div class="sidebar-item active"># diseño</div>
+                        <div class="sidebar-item"># ingeniería</div>
+                        <div class="sidebar-item"># general</div>
+                        <div class="sidebar-item"># releases</div>
+                        <div class="sidebar-item ai-item">Slake AI</div>
+                    </div>
+                    <div class="mockup-chat">
+                        <div class="chat-header"># diseño <span>4 miembros</span></div>
+                        <div class="chat-messages">
+                            <div class="chat-msg">
+                                <div class="avatar av-purple">A</div>
+                                <div class="msg-body">
+                                    <div class="msg-meta">Ana <span>10:42</span></div>
+                                    <div class="msg-text">Acabo de subir los nuevos mockups al canal </div>
+                                </div>
+                            </div>
+                            <div class="chat-msg">
+                                <div class="avatar av-teal">M</div>
+                                <div class="msg-body">
+                                    <div class="msg-meta">Miguel <span>10:43</span></div>
+                                    <div class="msg-text">Se ven increíbles! Los implementamos esta semana </div>
+                                </div>
+                            </div>
+                            <div class="chat-msg ai-bubble">
+                                <div class="avatar av-ai">◈</div>
+                                <div class="msg-body">
+                                    <div class="msg-meta ai-tag">Slake AI <span>10:44</span></div>
+                                    <div class="msg-text">Resumen: mockups aprobados. Próxima acción: implementar esta semana.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-mock">Escribe un mensaje...</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Logos -->
+    <section id="logos" aria-label="Empresas que usan Slake">
+        <div class="container">
+            <p class="logos-caption">Más de 50,000 equipos en todo el mundo confían en Slake</p>
+            <div class="logos-grid" aria-hidden="true">
+                <span>Airbnb</span>
+                <span>Shopify</span>
+                <span>Spotify</span>
+                <span>Stripe</span>
+                <span>Figma</span>
+                <span>Notion</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contadores -->
+    <section id="contadores" aria-label="Métricas de Slake">
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-card">
+                    <div class="counter-val" data-target="50000">0</div>
+                    <div class="counter-lbl">Equipos activos</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-val" data-target="2000000">0</div>
+                    <div class="counter-lbl">Mensajes al día</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-val" data-target="150">0</div>
+                    <div class="counter-lbl">Países</div>
+                </div>
+                <div class="counter-card">
+                    <div class="counter-val" data-target="99">0</div>
+                    <div class="counter-lbl">% Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios">
+        <div class="container">
+
+            <header class="section-header centered">
+                <div class="section-label">Por qué Slake</div>
+                <h2>Todo lo que tu equipo necesita</h2>
+                <p>Diseñado para equipos modernos que quieren moverse rápido sin sacrificar organización ni seguridad.</p>
+            </header>
+
+            <div class="benefits-grid">
+
+                <article class="benefit-card scroll-reveal">
+                    <div class="card-icon" aria-hidden="true"><span class="material-symbols-outlined">bolt</span></div>
+                    <h3>Velocidad real</h3>
+                    <p>Mensajes entregados en menos de 100ms. Tu equipo se comunica a la velocidad del pensamiento.</p>
+                </article>
+
+                <article class="benefit-card scroll-reveal">
+                    <div class="card-icon" aria-hidden="true"><span class="material-symbols-outlined">shield</span></div>
+                    <h3>Seguridad empresarial</h3>
+                    <p>Cifrado end-to-end, 2FA y cumplimiento GDPR. Tus conversaciones son exclusivamente tuyas.</p>
+                </article>
+
+                <article class="benefit-card scroll-reveal">
+                    <div class="card-icon" aria-hidden="true"><span class="material-symbols-outlined">group</span></div>
+                    <h3>Colaboración fluida</h3>
+                    <p>Canales por proyecto, hilos organizados y menciones inteligentes. Ningún mensaje se pierde.</p>
+                </article>
+
+                <article class="benefit-card scroll-reveal">
+                    <div class="card-icon" aria-hidden="true"><span class="material-symbols-outlined">extension</span></div>
+                    <h3>+100 integraciones</h3>
+                    <p>Conecta GitHub, Notion, Figma, Google Drive y más. Todo tu stack en un solo lugar.</p>
+                </article>
+
+                <article class="benefit-card scroll-reveal">
+                    <div class="card-icon" aria-hidden="true"><span class="material-symbols-outlined">auto_awesome</span></div>
+                    <h3>IA integrada</h3>
+                    <p>Resumen automático de conversaciones, respuestas sugeridas y búsqueda semántica con IA.</p>
+                </article>
+
+                <article class="benefit-card scroll-reveal">
+                    <div class="card-icon" aria-hidden="true"><span class="material-symbols-outlined">bar_chart</span></div>
+                    <h3>Analytics de equipo</h3>
+                    <p>Métricas de respuesta, actividad y engagement para tomar mejores decisiones.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Caracteristicas -->
+    <section id="caracteristicas">
+        <div class="container">
+
+            <header class="section-header">
+                <div class="section-label">Características</div>
+                <h2>Construido para la productividad</h2>
+                <p>Cada función fue diseñada para reducir el ruido y amplificar lo que importa.</p>
+            </header>
+
+            <div class="features-layout">
+
+                <div class="features-tabs" role="tablist" aria-label="Características principales">
+
+                    <button class="feature-tab active" role="tab" aria-selected="true" data-tab="canales">
+                        <div class="tab-icon" aria-hidden="true"><span class="material-symbols-outlined">tag</span></div>
+                        <div>
+                            <h4>Canales organizados</h4>
+                            <p>Estructura la comunicación por proyectos, departamentos o temas.</p>
+                        </div>
+                    </button>
+
+                    <button class="feature-tab" role="tab" aria-selected="false" data-tab="video">
+                        <div class="tab-icon" aria-hidden="true"><span class="material-symbols-outlined">videocam</span></div>
+                        <div>
+                            <h4>Videollamadas HD</h4>
+                            <p>Reuniones de alta calidad directamente desde la app.</p>
+                        </div>
+                    </button>
+
+                    <button class="feature-tab" role="tab" aria-selected="false" data-tab="archivos">
+                        <div class="tab-icon" aria-hidden="true"><span class="material-symbols-outlined">folder_open</span></div>
+                        <div>
+                            <h4>Gestión de archivos</h4>
+                            <p>Comparte, busca y organiza documentos con previsualización instantánea.</p>
+                        </div>
+                    </button>
+
+                    <button class="feature-tab" role="tab" aria-selected="false" data-tab="notif">
+                        <div class="tab-icon" aria-hidden="true"><span class="material-symbols-outlined">notifications</span></div>
+                        <div>
+                            <h4>Notificaciones inteligentes</h4>
+                            <p>Recibe solo lo relevante. El algoritmo aprende tus prioridades.</p>
+                        </div>
+                    </button>
+
+                </div>
+
+                <div class="features-visual" aria-hidden="true">
+                    <div class="app-mockup small">
+                        <div class="mockup-sidebar">
+                            <div class="sidebar-brand">◈</div>
+                            <div class="sidebar-item active"># diseño</div>
+                            <div class="sidebar-item"># dev</div>
+                            <div class="sidebar-item"># general</div>
+                        </div>
+                        <div class="mockup-chat">
+                            <div class="chat-header"># diseño</div>
+                            <div class="chat-messages">
+                                <div class="chat-msg">
+                                    <div class="avatar av-purple">A</div>
+                                    <div class="msg-body">
+                                        <div class="msg-meta">Ana</div>
+                                        <div class="msg-text">Revisaron el nuevo diseño? </div>
+                                    </div>
+                                </div>
+                                <div class="chat-msg">
+                                    <div class="avatar av-teal">L</div>
+                                    <div class="msg-body">
+                                        <div class="msg-meta">Laura</div>
+                                        <div class="msg-text">Sí! Increíble, aprobado </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-input-mock">Escribe un mensaje...</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+        <div class="container">
+
+            <header class="section-header centered">
+                <div class="section-label">Testimonios</div>
+                <h2>Lo que dicen los equipos</h2>
+                <p>Más de 50,000 equipos ya transformaron su comunicación con Slake.</p>
+            </header>
+
+            <div class="testimonios-grid">
+
+                <article class="testimonial-card scroll-reveal">
+                    <div class="stars" aria-label="5 estrellas">★★★★★</div>
+                    <p>"Desde que usamos Slake nuestras reuniones se redujeron un 40%. La organización de canales es brillante."</p>
+                    <div class="author">
+                        <div class="avatar av-purple" aria-hidden="true">A</div>
+                        <div>
+                            <strong>Ana García</strong>
+                            <span>CTO — TechStartup</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card scroll-reveal">
+                    <div class="stars" aria-label="5 estrellas">★★★★★</div>
+                    <p>"Las integraciones con GitHub, Figma y Notion funcionan perfecto. Es la herramienta que nos faltaba."</p>
+                    <div class="author">
+                        <div class="avatar av-teal" aria-hidden="true">M</div>
+                        <div>
+                            <strong>Miguel Torres</strong>
+                            <span>Lead Dev — DevCorp</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card scroll-reveal">
+                    <div class="stars" aria-label="5 estrellas">★★★★★</div>
+                    <p>"El soporte es excepcional y la plataforma mejora cada semana. 80 personas no imaginan trabajar sin Slake."</p>
+                    <div class="author">
+                        <div class="avatar av-orange" aria-hidden="true">L</div>
+                        <div>
+                            <strong>Laura Méndez</strong>
+                            <span>People Lead — GlobalCo</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- Info de contacto -->
+                <div class="contact-info">
+                    <div class="section-label">Contacto</div>
+                    <h2>Hablemos de tu equipo</h2>
+                    <p>¿Tienes preguntas? Nuestro equipo responde en menos de 24 horas.</p>
+                    <address>
+                        <div class="contact-item">
+                            <span aria-hidden="true"></span> hola@slake.app
+                        </div>
+                        <div class="contact-item">
+                            <span aria-hidden="true"></span> +1 (800) SLAKE-00
+                        </div>
+                        <div class="contact-item">
+                            <span aria-hidden="true"></span> San Francisco, CA
+                        </div>
+                    </address>
+                </div>
+
+                <!-- Formulario -->
+                <div class="form-card">
+                    <form id="contact-form" novalidate>
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" class="form-control"
+                                   placeholder="Tu nombre" autocomplete="name">
+                            <div class="field-error" id="err-nombre" role="alert">
+                                Por favor ingresa tu nombre.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" class="form-control"
+                                   placeholder="tu@empresa.com" autocomplete="email">
+                            <div class="field-error" id="err-email" role="alert">
+                                Ingresa un correo válido.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" class="form-control"
+                                   placeholder="Nombre de tu empresa">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" class="form-control"
+                                      placeholder="Cuéntanos sobre tu equipo..."></textarea>
+                            <div class="field-error" id="err-mensaje" role="alert">
+                                Por favor escribe un mensaje.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Enviar mensaje →
+                        </button>
+
+                        <div class="form-success" id="form-success" role="status">
+                             ¡Mensaje enviado! Te contactaremos pronto.
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo" aria-label="Slake inicio">
+                        <span class="logo-icon" aria-hidden="true">◈</span> Slake
+                    </a>
+                    <p>La plataforma que potencia a los mejores equipos del mundo.</p>
+
+                    <!-- Redes sociales -->
+                    <nav class="social-links" aria-label="Redes sociales de Slake">
+                        <a href="#" class="social-btn" aria-label="Twitter X">𝕏</a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+                        <a href="#" class="social-btn" aria-label="GitHub">GH</a>
+                        <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#">Precios</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Empleos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Slake Inc. Todos los derechos reservados.</p>
+                <p>Hecho con para equipos extraordinarios.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal-overlay" role="dialog" aria-modal="true"
+         aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar">×</button>
+            <div class="modal-emoji" aria-hidden="true"></div>
+            <h3 id="modal-title">Comienza gratis hoy</h3>
+            <p>Ingresa tu correo y te enviamos acceso inmediato. Sin tarjeta de crédito.</p>
+            <input type="email" class="form-control" id="modal-email"
+                   placeholder="tu@empresa.com" aria-label="Correo electrónico">
+            <button class="btn btn-primary btn-block" id="modal-submit">
+                Obtener acceso gratuito →
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>
